@@ -5,8 +5,8 @@ import cl.awakelab.retrofitexample.data.remote.TerrenoAPI
 
 class Repositorio(private val terrenoAPI: TerrenoAPI) {
 
-   // suspend fun cargarTerreno(): List<Terreno>{
+    suspend fun cargarTerreno() {
 
-      //  return terrenoAPI.getData()
-    //}
+
+    }
 }
