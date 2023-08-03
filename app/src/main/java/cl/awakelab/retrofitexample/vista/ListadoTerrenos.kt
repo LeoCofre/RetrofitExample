@@ -1,4 +1,4 @@
-package cl.awakelab.retrofitexample.presentation
+package cl.awakelab.retrofitexample.vista
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -16,9 +16,7 @@ class ListadoTerrenos : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
 
-        }
     }
 
     override fun onCreateView(
@@ -26,7 +24,20 @@ class ListadoTerrenos : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentListadoTerrenosBinding.inflate(layoutInflater, container, false)
+        initAdapter()
+        binding.btnCargar.setOnClickListener {
+            terrenoVM.getAllTerrenos()
+        }
+
         return binding.root
     }
 
+    private fun initAdapter() {
+        terrenoVM.getAllTerrenos()
+        val adapter = AdapterTerreno()
+        binding.rvListado.adapter = adapter
+        terrenoVM.terrenosLiveData.observe(viewLifecycleOwner) {
+            adapter.setData(it)
+        }
+    }
 }
