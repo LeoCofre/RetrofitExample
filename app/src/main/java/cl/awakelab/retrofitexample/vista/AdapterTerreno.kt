@@ -3,6 +3,7 @@ package cl.awakelab.retrofitexample.vista
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import cl.awakelab.retrofitexample.data.local.TerrenoEntity
 import cl.awakelab.retrofitexample.data.remote.Terreno
 import cl.awakelab.retrofitexample.databinding.ItemLayoutBinding
 import coil.load
@@ -10,7 +11,7 @@ import coil.load
 class AdapterTerreno : RecyclerView.Adapter<AdapterTerreno.ViewHolder>() {
 
     lateinit var binding: ItemLayoutBinding
-    private val listItemTerreno = mutableListOf<Terreno>()
+    private val listItemTerreno = mutableListOf<TerrenoEntity>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         binding = ItemLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -27,7 +28,7 @@ class AdapterTerreno : RecyclerView.Adapter<AdapterTerreno.ViewHolder>() {
         holder.bind(terreno)
     }
 
-    fun setData(terreno: List<Terreno>) {
+    fun setData(terreno: List<TerrenoEntity>) {
         this.listItemTerreno.clear()
         this.listItemTerreno.addAll(terreno)
         notifyDataSetChanged()
@@ -35,8 +36,8 @@ class AdapterTerreno : RecyclerView.Adapter<AdapterTerreno.ViewHolder>() {
 
     inner class ViewHolder(val binding: ItemLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(terreno: Terreno) {
-            binding.imgItem.load(terreno.img)
+        fun bind(terreno: TerrenoEntity) {
+            binding.imgItem.load(terreno.imagen)
         }
     }
 }
