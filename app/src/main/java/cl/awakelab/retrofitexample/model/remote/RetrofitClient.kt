@@ -1,4 +1,4 @@
-package cl.awakelab.retrofitexample.data.remote
+package cl.awakelab.retrofitexample.model.remote
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

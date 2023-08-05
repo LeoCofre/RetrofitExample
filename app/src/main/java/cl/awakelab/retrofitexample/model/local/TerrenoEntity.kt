@@ -1,4 +1,4 @@
-package cl.awakelab.retrofitexample.data.local
+package cl.awakelab.retrofitexample.model.local
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

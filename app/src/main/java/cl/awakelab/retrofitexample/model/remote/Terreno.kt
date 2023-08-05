@@ -1,4 +1,4 @@
-package cl.awakelab.retrofitexample.data.remote
+package cl.awakelab.retrofitexample.model.remote
 
 import com.google.gson.annotations.SerializedName
 

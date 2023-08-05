@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import cl.awakelab.retrofitexample.databinding.FragmentListadoTerrenosBinding
+import cl.awakelab.retrofitexample.view_model.TerrenoVM
 
 
 class ListadoTerrenos : Fragment() {

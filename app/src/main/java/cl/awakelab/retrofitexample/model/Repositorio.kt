@@ -1,10 +1,10 @@
-package cl.awakelab.retrofitexample.data
+package cl.awakelab.retrofitexample.model
 
 import androidx.lifecycle.LiveData
-import cl.awakelab.retrofitexample.data.local.TerrenoDao
-import cl.awakelab.retrofitexample.data.local.TerrenoEntity
-import cl.awakelab.retrofitexample.data.remote.Terreno
-import cl.awakelab.retrofitexample.data.remote.TerrenoAPI
+import cl.awakelab.retrofitexample.model.local.TerrenoDao
+import cl.awakelab.retrofitexample.model.local.TerrenoEntity
+import cl.awakelab.retrofitexample.model.remote.Terreno
+import cl.awakelab.retrofitexample.model.remote.TerrenoAPI
 
 class Repositorio(private val terrenoAPI: TerrenoAPI, private val terrenoDao: TerrenoDao) {
 
@@ -21,6 +21,10 @@ class Repositorio(private val terrenoAPI: TerrenoAPI, private val terrenoDao: Te
             }
         }
     }
+
+    fun obtenerTerreno(id: String): LiveData<TerrenoEntity> = terrenoDao.getTerreno(id)
+
 }
 
 fun Terreno.transformar(): TerrenoEntity = TerrenoEntity(this.id, this.price, this.type, this.img)
+

@@ -1,13 +1,11 @@
-package cl.awakelab.retrofitexample.vista
+package cl.awakelab.retrofitexample.view_model
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import cl.awakelab.retrofitexample.data.Repositorio
-import cl.awakelab.retrofitexample.data.local.TerrenoDatabase
-import cl.awakelab.retrofitexample.data.remote.RetrofitClient
-import cl.awakelab.retrofitexample.data.remote.Terreno
+import cl.awakelab.retrofitexample.model.Repositorio
+import cl.awakelab.retrofitexample.model.local.TerrenoDatabase
+import cl.awakelab.retrofitexample.model.remote.RetrofitClient
 import kotlinx.coroutines.launch
 
 class TerrenoVM(applicacion: Application) : AndroidViewModel(applicacion) {
@@ -25,4 +23,6 @@ class TerrenoVM(applicacion: Application) : AndroidViewModel(applicacion) {
     fun getAllTerrenos() = viewModelScope.launch {
         repositorio.cargarTerreno()
     }
+
+    fun terrenoLiveData(id: String) = repositorio.obtenerTerreno(id)
 }

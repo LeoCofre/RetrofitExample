@@ -38,4 +38,15 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/txtPrecioDetalle"
         app:layout_constraintTop_toBottomOf="@+id/txtPrecioDetalle" />
+
+    <TextView
+        android:id="@+id/textIdDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/txtTipoDetalle"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtTipoDetalle"
+        app:layout_constraintTop_toBottomOf="@+id/txtTipoDetalle" />
 </androidx.constraintlayout.widget.ConstraintLayout>
