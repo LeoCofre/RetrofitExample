@@ -6,47 +6,78 @@
     android:layout_height="match_parent"
     tools:context=".vista.DetalleFragment">
 
+    <TextView
+        android:id="@+id/txtTipoDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="#FAF6F6"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtPrecioDetalle"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/txtPrecioDetalle" />
+
     <ImageView
         android:id="@+id/imgDetalle"
-        android:layout_width="251dp"
-        android:layout_height="203dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="108dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtPrecioDetalle"
+        android:layout_width="250dp"
+        android:layout_height="258dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/txtPrecioDetalle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/imgDetalle"
-        app:layout_constraintStart_toStartOf="@+id/imgDetalle"
-        app:layout_constraintTop_toBottomOf="@+id/imgDetalle" />
-
-    <TextView
-        android:id="@+id/txtTipoDetalle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/txtPrecioDetalle"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/txtPrecioDetalle"
-        app:layout_constraintTop_toBottomOf="@+id/txtPrecioDetalle" />
-
-    <TextView
         android:id="@+id/textIdDetalle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
         android:text="TextView"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/txtTipoDetalle"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="@+id/txtTipoDetalle"
-        app:layout_constraintTop_toBottomOf="@+id/txtTipoDetalle" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTipoDetalle"
+        app:layout_constraintVertical_bias="0.393" />
+
+    <TextView
+        android:id="@+id/txtPrecioDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="12dp"
+        android:text="TextView"
+        android:textColor="#FAF8F8"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/imgDetalle"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/imgDetalle" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Precio $"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/imgDetalle"
+        app:layout_constraintTop_toBottomOf="@+id/imgDetalle"
+        android:textColor="#F8F5F5" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:text="Tipo"
+        android:textColor="#FAF9F9"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
